@@ -24,5 +24,10 @@ jobs:
         pip install bs4 python-dotenv
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run script
+      env:
+        EMAIL: ${{ secrets.EMAIL }}
+        PASS: ${{ secrets.PASS }}
+        USER: ${{ secrets.USER }}
+        EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
       run: |
         python main.py
