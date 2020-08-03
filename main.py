@@ -13,7 +13,7 @@ c=r.read().decode('utf8')
 bs_obj = bs(c,'html.parser')
 t = bs_obj.find_all('table')[1]
 all_tr = t.find_all('tr')
-pound =all_tr[9]
+pound =all_tr[8]
 
 a= pound.text[0:37]
 print(a)
